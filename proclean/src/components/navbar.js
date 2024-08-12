@@ -16,7 +16,7 @@ const CustomNavbar = styled(Navbar)`
 
     .nav-link {
         color: #053a80; /* Color de texto azul para los enlaces */
-        font-size: 1rem; /* Tamaño de fuente base ajustado */
+        font-size: 1.3rem; /* Tamaño de fuente base ajustado */
         margin-right: 1rem; /* Espaciado entre enlaces */
 
         &:hover {
@@ -48,6 +48,13 @@ const LogoWrapper = styled.div`
     display: flex;
     align-items: center;
     margin-right: 2rem; /* Separación entre el logo y los enlaces */
+
+    /* Contenedor responsivo para la imagen del logo */
+    img {
+        max-width: 15rem; /* Limita el ancho máximo de la imagen */
+        width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
 `;
 
 function NavBar() {
@@ -59,8 +66,6 @@ function NavBar() {
                     <img
                         src={logo}
                         alt="ProClean Logo"
-                        width="100"
-                        height="50"
                         className="d-inline-block align-top"
                     />
                 </LogoWrapper>
@@ -77,7 +82,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-
-
-
